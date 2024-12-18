@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Sorteio Interativo: Participe do sorteio de nomes ou números de forma fácil e rápida.">
+    <title>Sorteio Interativo</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1><i class="fas fa-gift" aria-hidden="true"></i> Sorteio Interativo</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sorteio" aria-label="Ir para sorteio"><i class="fas fa-dice" aria-hidden="true"></i> Sorteio</a></li>
+                    <li><a href="#historico" aria-label="Ir para histórico"><i class="fas fa-history" aria-hidden="true"></i> Histórico</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="sorteio">
+            <div class="container">
+                <h2><i class="fas fa-cogs" aria-hidden="true"></i> Escolha o tipo de sorteio</h2>
+                <div class="input-group">
+                    <label for="tipoSorteio"><i class="fas fa-sliders-h" aria-hidden="true"></i> Tipo de sorteio</label>
+                    <select id="tipoSorteio" onchange="mudarSorteio()" aria-label="Escolha o tipo de sorteio">
+                        <option value="nomes">Nomes</option>
+                        <option value="numeros">Números</option>
+                    </select>
+                </div>
+                
+                <div class="input-group" id="campoNomes">
+                    <label for="nomes"><i class="fas fa-users" aria-hidden="true"></i> Insira os nomes (separados por vírgula)</label>
+                    <textarea id="nomes" placeholder="Exemplo: João, Maria, Pedro" aria-label="Insira os nomes separados por vírgula"></textarea>
+                </div>
+
+                <div class="input-group" id="campoNumeros" style="display:none;">
+                    <label for="numeros"><i class="fas fa-sort-numeric-up-alt" aria-hidden="true"></i> Insira o intervalo de números</label>
+                    <input type="number" id="minNumero" placeholder="Mínimo" min="1" aria-label="Número mínimo" required>
+                    <input type="number" id="maxNumero" placeholder="Máximo" min="1" aria-label="Número máximo" required>
+                </div>
+
+                <button id="botaoSorteio" onclick="sortear()" aria-label="Sortear" disabled><i class="fas fa-random" aria-hidden="true"></i> Sortear</button>
+
+                <div id="resultado" class="resultado" aria-live="polite"></div>
+            </div>
+        </section>
+
+        <section id="historico">
+            <div class="container">
+                <h2><i class="fas fa-history" aria-hidden="true"></i> Histórico de Sorteios</h2>
+                <ul id="historicoLista"></ul>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Sorteio Interativo. Todos os direitos reservados. <i class="fas fa-copyright" aria-hidden="true"></i></p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

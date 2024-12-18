@@ -1,0 +1,346 @@
+/* Reset de estilo */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f7f6;
+  color: #333;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #007bff;
+  color: white;
+  padding: 20px 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+header h1 {
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+header h1 i {
+  margin-right: 10px;
+}
+
+header nav ul {
+  list-style: none;
+  display: flex;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+
+header nav ul li a i {
+  margin-right: 5px;
+}
+
+header .hamburger {
+  display: none; /* Esconde o menu hamburguer por padrão */
+  cursor: pointer;
+}
+
+main {
+  padding: 40px 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+h2 i {
+  margin-right: 10px;
+}
+
+.input-group {
+  margin-bottom: 20px;
+}
+
+.input-group label {
+  font-size: 1rem;
+  display: block;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.input-group label i {
+  margin-right: 10px;
+}
+
+input, textarea, select {
+  width: 100%;
+  padding: 10px;
+  font-size: 1rem;
+  border: 2px solid #ccc;
+  border-radius: 5px;
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+button i {
+  margin-right: 10px;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+button:active {
+  background-color: #1e7e34;
+}
+
+.resultado {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+#historico {
+  margin-top: 40px;
+}
+
+#historicoLista {
+  list-style: none;
+}
+
+#historicoLista li {
+  margin-bottom: 10px;
+  background-color: #fff;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+footer {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Responsividade para telas menores */
+@media (max-width: 768px) {
+  header .container {
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: center;
+  }
+
+  header nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+  }
+
+  header nav ul li {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  header .hamburger {
+    display: block; /* Exibe o ícone do menu hamburguer */
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  .input-group label {
+    font-size: 0.9rem;
+  }
+
+  .input-group input, .input-group textarea, .input-group select {
+    font-size: 0.9rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 15px;
+    font-size: 1.2rem;
+  }
+
+  #campoNumeros {
+    display: block;
+    margin-top: 15px;
+  }
+
+  #historicoLista li {
+    font-size: 0.9rem;
+  }
+
+  footer p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  header nav ul li {
+    margin-left: 0;
+    margin-top: 8px;
+  }
+
+  .container {
+    padding: 0 10px;
+  }
+
+  button {
+    font-size: 1rem;
+  }
+
+  .input-group input, .input-group textarea, .input-group select {
+    font-size: 0.85rem;
+  }
+
+  footer p {
+    font-size: 0.8rem;
+  }
+}
+
+/* Ajustes para dispositivos móveis e telas pequenas */
+@media (max-width: 768px) {
+  /* Tamanho da fonte no header */
+  header h1 {
+    font-size: 1.5rem; /* Reduzindo o tamanho do título */
+  }
+
+  /* Menu em formato hamburger */
+  header nav ul {
+    display: none; /* Esconde o menu normal */
+  }
+
+  header .hamburger {
+    display: block; /* Exibe o ícone do menu */
+  }
+
+  /* Ajustes no layout do conteúdo */
+  .container {
+    padding: 0 10px; /* Diminui o espaçamento */
+  }
+
+  /* Tamanho das fontes dos parágrafos e outros textos */
+  p, h2, .input-group label {
+    font-size: 1rem; /* Fontes menores em telas pequenas */
+  }
+
+  /* Reduzindo o tamanho dos botões e inputs */
+  button, input, textarea, select {
+    font-size: 1rem;
+    width: 100%; /* Expandir inputs e botões para ocupar toda a largura */
+  }
+
+  /* Ajuste de listas e históricos */
+  #historicoLista li {
+    padding: 10px;
+    font-size: 0.9rem; /* Texto menor nas listas */
+  }
+
+  /* Ajustando imagens para serem fluídas */
+  img {
+    width: 100%;
+    height: auto; /* Ajuste das imagens */
+  }
+
+  /* Rodapé mais compacto */
+  footer p {
+    font-size: 0.9rem;
+  }
+
+  /* Ajustes na responsividade do header */
+  header .container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  header nav ul li {
+    margin-top: 10px;
+    margin-left: 0;
+  }
+
+  /* Ajuste nos ícones */
+  header h1 i {
+    font-size: 1.2rem; /* Ícones menores para telas pequenas */
+  }
+}
+
+@media (max-width: 480px) {
+  /* Aumentando a legibilidade para telas muito pequenas */
+  header h1 {
+    font-size: 1.4rem;
+  }
+
+  button {
+    padding: 12px 15px;
+  }
+
+  .container {
+    padding: 0 5px; /* Menos padding nas extremidades */
+  }
+
+  footer p {
+    font-size: 0.8rem; /* Fontes menores no rodapé */
+  }
+
+  .input-group label {
+    font-size: 0.9rem; /* Fontes dos labels menores */
+  }
+}
